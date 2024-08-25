@@ -10,3 +10,7 @@ gem "rake", "~> 13.0"
 gem "minitest", "~> 5.16"
 
 gem "rubocop", "~> 1.21"
+
+gem "dotenv", groups: [:development, :test]
+gem "grpc", require: false
+gem "grpc-tools", require: false
