@@ -4,8 +4,12 @@ module Wineskills
   class CLI < Thor
     desc "wines", "Prints all wines"
     def wines
-      client = ::Gruf::Client.new(service: ::WineskillsRpc::Wines, options: { hostname: ENV.fetch("GRPC_SERVICES_URL") } )
-      puts client.call(:GetWines).message.wines
+      puts Rpc.instance.client.call(:GetWines).message.wines
+    end
+
+    desc "search QUERY", "Search wines with QUERY"
+    def search(query)
+      puts Rpc.instance.client.call(:SearchWines, query: query).message.wines
     end
   end
 end

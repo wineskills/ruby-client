@@ -15,6 +15,7 @@ module WineskillsRpc
       self.service_name = 'wineskills_rpc.Wines'
 
       rpc :GetWines, ::WineskillsRpc::GetWinesRequest, ::WineskillsRpc::GetWinesResponse
+      rpc :SearchWines, ::WineskillsRpc::SearchWinesRequest, ::WineskillsRpc::SearchWinesResponse
     end
 
     Stub = Service.rpc_stub_class

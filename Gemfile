@@ -11,6 +11,12 @@ gem "minitest", "~> 5.16"
 
 gem "rubocop", "~> 1.21"
 
-gem "dotenv", groups: [:development, :test]
+gem "dotenv", groups: %i[development test]
 gem "grpc", require: false
 gem "grpc-tools", require: false
+
+# prettier
+gem "prettier_print"
+gem "syntax_tree"
+gem "syntax_tree-haml"
+gem "syntax_tree-rbs"
